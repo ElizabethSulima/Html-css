@@ -252,32 +252,30 @@
 }
 
 .last-posts__search {
-  width: 270px;
-  background-color: #f4f7f6;
   margin-top: 57px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 63px;
+  margin-bottom: 65px;
 }
 
 .search {
-  width: 48px;
   font-size: 13px;
-  line-height: 40px;
-  color: #000000;
+  border: none;
   margin-left: 13px;
+  padding-left: 15px;
+  height: 48px;
+  width: 222px;
 }
 
-.search:focus {
-  width: 270px;
-  height: 48px;
-  background-color: #f4f7f6;
+.search:focus,
+.input__email:focus {
+  outline: 1px solid #b59f5b;
 }
 
 .button_search {
-  width: 48px;
-  height: 48px;
+  width: 50px;
   background-color: #b59f5b;
+  border: none;
 }
 
 .magnifier {
@@ -294,6 +292,12 @@
   line-height: 40px;
   color: #000000;
   font-weight: 400;
+  border: none;
+}
+
+.search,
+.input__email {
+  background-color: #f4f7f6;
 }
 
 .button__email {
@@ -307,32 +311,84 @@
   color: #ffffff;
   background-color: #b59f5b;
   margin-bottom: 60px;
+  border: none;
+}
+
+.button__email:hover,
+.button_search:hover {
+  background-color: #323232;
 }
 
 .tags {
   width: 262px;
-  height: 103px;
 }
 
 .list-tags {
+  justify-content: left;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  text-align: center;
+  gap: 17px;
+  margin-left: 10px;
+  margin-bottom: 64px;
 }
 
 .tag {
   font-size: 12px;
-  line-height: 40px;
+  line-height: 20px;
   text-transform: uppercase;
-  color: #0f0d0e;
   font-weight: 700;
 }
 
-.tag:hover {
-  opacity: 0;
-  width: 90px;
-  height: 30px;
-  background-color: rgba(253, 249, 242, 0);
+.tag__link {
+  padding: 2px 5px;
+  background-color: rgba(244, 243, 241, 0);
   border: 3px solid #eeeeee;
+  color: #0f0d0e;
+  text-decoration: none;
+}
+
+.categories {
+  width: 272px;
+}
+
+.categories__list {
+  justify-content: left;
+  margin-top: -13px;
+}
+
+.category {
+  font-size: 14px;
+  line-height: 46px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.category::after {
+  width: 271px;
+  height: 1px;
+  background-color: #eeeeee;
+}
+
+.category__link {
+  text-decoration: none;
+  color: #0f0d0e;
+}
+
+.level {
+  font-size: 12px;
+  line-height: 36px;
+  color: #b59f5b;
+  font-weight: 700;
+}
+
+.footer {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.social-logo {
+  width: 20px;
+  height: auto;
 }
