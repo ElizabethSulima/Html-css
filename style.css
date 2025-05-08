@@ -20,6 +20,12 @@
   font-family: OpenSans, sans-serif;
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
+}
+
+input,
+button {
+  border: none;
 }
 
 .pixel-perfect {
@@ -79,7 +85,7 @@
   content: "";
   background-color: #000000;
   position: absolute;
-  opacity: 0.45;
+  opacity: 0.6;
   top: 0;
   left: 0;
   bottom: 0;
@@ -104,7 +110,11 @@
 
 .nav__link {
   color: white;
-  text-decoration: none;
+}
+
+.nav__link:hover,
+.link__item:hover {
+  text-decoration: underline;
 }
 
 .header-title {
@@ -166,7 +176,6 @@
 
 .link__item {
   color: #b59f5b;
-  text-decoration: none;
 }
 
 .article__title {
@@ -174,9 +183,14 @@
   font-size: 20.4px;
   font-weight: 700;
   line-height: 1.2;
-  width: 450px;
   margin-bottom: 24px;
-  width: 350px;
+  color: #0f0d0e;
+}
+
+.article__title:hover,
+.last-post__title:hover,
+.category__link:hover {
+  color: #b59f5b;
 }
 
 .article__date {
@@ -239,7 +253,6 @@
 }
 
 .last-post__date {
-  font-weight: 400;
   font-size: 12px;
 }
 
@@ -249,20 +262,20 @@
   text-transform: uppercase;
   line-height: 1.2;
   margin-top: 11px;
+  color: #0f0d0e;
 }
 
 .last-posts__search {
-  margin-top: 57px;
+  margin-top: 59px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 65px;
+  margin-bottom: 63px;
 }
 
 .search {
   font-size: 13px;
-  border: none;
   margin-left: 13px;
-  padding-left: 15px;
+  padding-left: 3px;
   height: 48px;
   width: 222px;
 }
@@ -275,7 +288,6 @@
 .button_search {
   width: 50px;
   background-color: #b59f5b;
-  border: none;
 }
 
 .magnifier {
@@ -283,16 +295,13 @@
 }
 
 .input__email {
-  height: 49px;
+  height: 45px;
   width: 271px;
-  margin-bottom: 11px;
-  padding-left: 15px;
-  opacity: 0.541;
+  margin-bottom: 15px;
+  padding-left: 17px;
+  padding-bottom: 10px;
   font-size: 13px;
-  line-height: 40px;
   color: #000000;
-  font-weight: 400;
-  border: none;
 }
 
 .search,
@@ -310,8 +319,7 @@
   text-transform: uppercase;
   color: #ffffff;
   background-color: #b59f5b;
-  margin-bottom: 60px;
-  border: none;
+  margin-bottom: 62px;
 }
 
 .button__email:hover,
@@ -327,24 +335,26 @@
   justify-content: left;
   display: flex;
   flex-wrap: wrap;
-  gap: 17px;
-  margin-left: 10px;
-  margin-bottom: 64px;
+  gap: 20px;
+  margin-left: 9px;
+  margin-bottom: 65px;
 }
 
 .tag {
   font-size: 12px;
-  line-height: 20px;
   text-transform: uppercase;
   font-weight: 700;
 }
 
 .tag__link {
   padding: 2px 5px;
-  background-color: rgba(244, 243, 241, 0);
   border: 3px solid #eeeeee;
   color: #0f0d0e;
-  text-decoration: none;
+}
+
+.tag__link:hover {
+  border: 3px solid #b59f5b;
+  background-color: rgba(244, 243, 241, 0);
 }
 
 .categories {
@@ -353,7 +363,7 @@
 
 .categories__list {
   justify-content: left;
-  margin-top: -13px;
+  margin-top: -15px;
 }
 
 .category {
@@ -362,6 +372,7 @@
   text-transform: capitalize;
   font-weight: 700;
 }
+
 .category::after {
   width: 271px;
   height: 1px;
@@ -369,26 +380,56 @@
 }
 
 .category__link {
-  text-decoration: none;
   color: #0f0d0e;
 }
 
 .level {
   font-size: 12px;
-  line-height: 36px;
+  line-height: 2;
   color: #b59f5b;
   font-weight: 700;
+  margin-left: 2px;
 }
 
 .footer {
   display: flex;
-  gap: 25px;
-  margin-bottom: 20px;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 38px;
 }
 
-.social-logo {
+.footer__list-social-logo {
+  display: flex;
+  list-style: none;
+  line-height: 0.8;
+  font-size: 14px;
+  font-weight: 700;
+  flex-wrap: wrap;
+  gap: 27px;
+}
+
+.social-logo-link {
   width: 20px;
-  height: auto;
+  height: 20px;
+  display: block;
+  flex-wrap: wrap;
+}
+
+.dribbble-logo {
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg");
+}
+.pinterest-logo {
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg");
+}
+.tumblr-logo {
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+}
+
+.copyright {
+  width: 218px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #999999;
+  font-weight: 700;
+  margin-top: 103px;
 }
